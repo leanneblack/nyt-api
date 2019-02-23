@@ -1,3 +1,8 @@
 body {
-    background-image: url="../assets/images/nytsign.jpg"
+    background-image: url("../images/nytsign.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
 }
+    
