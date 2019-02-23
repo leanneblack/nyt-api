@@ -1,10 +1,11 @@
-document.getElementById('fetch-btn').addEventListener('click', function () {
+let cardResult = document.getElementById('card-result');
+document.getElementById('submit-btn').addEventListener('click', function (e) {
   // collect data
-  let cardResult = document.getElementById('card-result');
-  // let searchTerm = document.getElementById('search-term').value;
-  let searchTerm = 'new green deal';
-  // let searchNum = document.getElementById('search-num');
-  let searchNum = 8;
+  cardResult.innerHTML = '';
+  e.preventDefault();
+
+  let searchTerm = document.getElementById('search').value;
+  let searchNum = document.getElementById('records').value;
   // let searchStart = document.getElementById('start-year');
   let searchStart = 2010;
   // let searchEnd = document.getElementById('end-year');
@@ -29,6 +30,8 @@ document.getElementById('fetch-btn').addEventListener('click', function () {
           p.textContent = results.response.docs[i].byline.original;
           h3.appendChild(a);
           console.log('click')
+          cardResult.appendChild(h3);
+          cardResult.appendChild(p);
         }
 
 
